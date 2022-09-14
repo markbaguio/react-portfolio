@@ -7,7 +7,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DrawerComponent from "./DrawerComponent";
 import Homepage from "../Pages/Homepage";
 import { Link } from "react-router-dom";
@@ -32,12 +32,25 @@ const Layout = ({ children }) => {
     setValue(newValue);
   };
 
+  const pages = ["/", "/projects", "experience"];
+
+  /**
+   * this useEffect hook runs every time the value changes.
+   * it ensures that the indicated tab is in sync with the route.
+   */
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path === "/" && value !== "one") setValue("one");
+    else if (path === "/projects" && value !== "two") setValue("two");
+    else if (path === "/experience" && value !== "three") setValue("three");
+  }, [value]);
+
   // const pages = ["Home", "Projects", "Experience"];
 
   // const LinkTab = (props) => {
   //   return (
   //     <Tab
-  //       LinkComponent="a"
+  //       component="a"
   //       onClick={(e) => {
   //         e.preventDefault();
   //       }}
@@ -71,9 +84,27 @@ const Layout = ({ children }) => {
                 {/* {pages.map((page, index) => (
                   <Tab key={index} label={page} />
                 ))} */}
-                <Tab value="one" label="Home" />
-                <Tab value="two" label="Projects" />
-                <Tab value="three" label="Experience" />
+                {/**  LinkComponent takes in a Link component from react router dom.
+                 *    this allows the individual tab to render the proper page.
+                 */}
+                <Tab
+                  value="one"
+                  label="Home"
+                  LinkComponent={Link}
+                  to={pages[0]}
+                />
+                <Tab
+                  value="two"
+                  label="Projects"
+                  LinkComponent={Link}
+                  to={pages[1]}
+                />
+                <Tab
+                  value="three"
+                  label="Experience"
+                  LinkComponent={Link}
+                  to={pages[2]}
+                />
               </Tabs>
             </>
           )}

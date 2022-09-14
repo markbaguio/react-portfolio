@@ -1,6 +1,7 @@
 import "./App.css";
 import Homepage from "./Pages/Homepage";
 import Projects from "./Pages/Projects";
+import Experience from "./Pages/Experience";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
@@ -40,6 +41,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/Projects" element={<Projects />} />
+            <Route path="/Experience" element={<Experience />} />
           </Routes>
         </Layout>
       </ThemeProvider>

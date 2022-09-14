@@ -48,7 +48,6 @@ const DrawerComponent = () => {
                   <BeenhereOutlinedIcon fontSize="large" />
                 </ListItemIcon>
                 <ListItemText>Projects</ListItemText>
-                <Link to="/projects"></Link>
               </ListItemButton>
             </Link>
             <Link to="/experience">
