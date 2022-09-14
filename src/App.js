@@ -3,9 +3,7 @@ import Homepage from "./Pages/Homepage";
 import Projects from "./Pages/Projects";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout";
-import { createTheme, ThemeProvider } from "@mui/material";
-import { grey, purple, red } from "@mui/material/colors";
-import { GlobalStylesProps } from "@mui/material";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
 const defaultTheme = createTheme({
   palette: {
@@ -37,6 +35,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
+        <CssBaseline />
         <Layout>
           <Routes>
             <Route path="/" element={<Homepage />} />
