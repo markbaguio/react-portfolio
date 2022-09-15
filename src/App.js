@@ -4,7 +4,12 @@ import Projects from "./Pages/Projects";
 import Experience from "./Pages/Experience";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout";
-import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import {
+  createTheme,
+  CssBaseline,
+  ThemeProvider,
+  Container,
+} from "@mui/material";
 
 const defaultTheme = createTheme({
   palette: {
@@ -38,11 +43,18 @@ function App() {
       <ThemeProvider theme={defaultTheme}>
         <CssBaseline />
         <Layout>
+          {/* <Container
+            sx={{
+              backgroundColor: "red",
+              height: "100vh",
+            }}
+          > */}
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/Projects" element={<Projects />} />
             <Route path="/Experience" element={<Experience />} />
           </Routes>
+          {/* </Container> */}
         </Layout>
       </ThemeProvider>
     </>

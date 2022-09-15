@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
     setValue(newValue);
   };
 
-  const pages = ["/", "/projects", "experience"];
+  // const pages = ["/", "/projects", "experience"];
 
   /**
    * this useEffect hook runs every time the value changes.
@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <AppBar position="sticky" elevation={1}>
+      <AppBar position="sticky" elevation={4}>
         <Toolbar>
           {isMatch ? (
             <>
@@ -91,19 +91,22 @@ const Layout = ({ children }) => {
                   value="one"
                   label="Home"
                   LinkComponent={Link}
-                  to={pages[0]}
+                  // to={pages[0]}
+                  to="/"
                 />
                 <Tab
                   value="two"
                   label="Projects"
                   LinkComponent={Link}
-                  to={pages[1]}
+                  // to={pages[1]}
+                  to="/projects"
                 />
                 <Tab
                   value="three"
                   label="Experience"
                   LinkComponent={Link}
-                  to={pages[2]}
+                  // to={pages[2]}
+                  to="/experience"
                 />
               </Tabs>
             </>
