@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { useState, useEffect } from "react";
 import DrawerComponent from "./DrawerComponent";
-import Homepage from "../Pages/Homepage";
 import { Link } from "react-router-dom";
 /**
  * Material UI Breakpoints:
@@ -24,6 +23,8 @@ const Layout = ({ children }) => {
   const [value, setValue] = useState("one");
   const currentTheme = useTheme(); //console logs the default theme
   const isMatch = useMediaQuery(currentTheme.breakpoints.down("md"));
+
+  useMediaQuery(currentTheme.breakpoints.down("sm"), console.log("hit"));
   /**
    * the isMatch variable is true if the screen size is less than md(900px)
    */

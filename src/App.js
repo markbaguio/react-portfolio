@@ -4,38 +4,8 @@ import Projects from "./Pages/Projects";
 import Experience from "./Pages/Experience";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout";
-import {
-  createTheme,
-  CssBaseline,
-  ThemeProvider,
-  Container,
-} from "@mui/material";
-
-const defaultTheme = createTheme({
-  palette: {
-    mode: "dark",
-  },
-  components: {
-    MuiContainer: {
-      defaultProps: {
-        // sx: {
-        //   color: orange[400],
-        // },
-      },
-    },
-    MuiAppBar: {
-      defaultProps: {
-        sx: {
-          // backgroundColor: "#242526",
-          marginBottom: "1rem",
-        },
-      },
-    },
-  },
-  typography: {
-    fontFamily: "Montserrat",
-  },
-});
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { defaultTheme } from "../src/DefaultTheme";
 
 function App() {
   return (
@@ -43,12 +13,6 @@ function App() {
       <ThemeProvider theme={defaultTheme}>
         <CssBaseline />
         <Layout>
-          {/* <Container
-            sx={{
-              backgroundColor: "red",
-              height: "100vh",
-            }}
-          > */}
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/Projects" element={<Projects />} />
