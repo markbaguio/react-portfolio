@@ -23,6 +23,13 @@ import { defaultTheme } from "../DefaultTheme";
  * md: 900px - 1199px
  * lg: 1200px - 1535px
  * xl: 1536px
+ * 
+ * Updated breakpoints:
+ *  xs: 0px - 399px,
+    sm: 400px - 899px,
+    md: 900px - 1199px,
+    lg: 1200px - 1535px,
+    xl: 1536,
  */
 
 const Home = () => {
@@ -48,9 +55,10 @@ const Home = () => {
     <>
       <Container
         sx={{
-          height: "100vh",
+          height: "100%",
           // display: "flex",
           // backgroundColor: "aqua",
+          marginBottom: 0,
         }}
       >
         <Grid container spacing={5}>
@@ -70,7 +78,6 @@ const Home = () => {
             <Box width="100%">
               <Typography
                 variant="h2"
-                lineHeight={1.3}
                 fontSize={{
                   lg: "4rem",
                   md: "2.8rem",
@@ -226,7 +233,7 @@ const Home = () => {
               width="100%"
               display="flex"
               // backgroundColor="blue"
-              height="auto"
+              height="100%"
               justifyContent={{
                 lg: "start",
                 md: "start",
@@ -239,8 +246,8 @@ const Home = () => {
                 sx={{
                   width: {
                     md: "85%",
-                    sm: "50%",
-                    xs: "50%",
+                    sm: "30%",
+                    xs: "30%",
                   },
                 }}
               >
