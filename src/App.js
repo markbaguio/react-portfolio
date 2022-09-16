@@ -4,7 +4,7 @@ import Projects from "./Pages/Projects";
 import Experience from "./Pages/Experience";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider, responsiveFontSizes } from "@mui/material";
 import { defaultTheme } from "../src/DefaultTheme";
 
 function App() {

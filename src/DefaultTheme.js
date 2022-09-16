@@ -1,6 +1,6 @@
-import { createTheme } from "@mui/material";
+import { createTheme, responsiveFontSizes } from "@mui/material";
 
-export const defaultTheme = createTheme({
+export let defaultTheme = createTheme({
   palette: {
     mode: "dark",
   },
@@ -22,6 +22,26 @@ export const defaultTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Montserrat", "Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: "Montserrat",
+    h2: {
+      ["(@min-width:600px)"]: {
+        fontSize: "0.3rem",
+      },
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 400,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
   },
 });
+
+// export default defaultTheme = responsiveFontSizes(
+//   defaultTheme,
+//   ["xs", "sm", "md", "lg"],
+//   5
+// );

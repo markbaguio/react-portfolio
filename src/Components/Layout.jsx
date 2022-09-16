@@ -10,6 +10,7 @@ import {
 import { useState, useEffect } from "react";
 import DrawerComponent from "./DrawerComponent";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 /**
  * Material UI Breakpoints:
  * xs: 0px
@@ -23,8 +24,12 @@ const Layout = ({ children }) => {
   const [value, setValue] = useState("one");
   const currentTheme = useTheme(); //console logs the default theme
   const isMatch = useMediaQuery(currentTheme.breakpoints.down("md"));
+  console.log(useMediaQuery(currentTheme.breakpoints.down("lg")), "lg");
+  console.log(useMediaQuery(currentTheme.breakpoints.down("md")), "md");
+  console.log(useMediaQuery(currentTheme.breakpoints.down("sm")), "sm");
+  console.log(useMediaQuery(currentTheme.breakpoints.down("xs")), "xs");
 
-  useMediaQuery(currentTheme.breakpoints.down("sm"), console.log("hit"));
+  // useMediaQuery(currentTheme.breakpoints.down("sm"), console.log("hit"));
   /**
    * the isMatch variable is true if the screen size is less than md(900px)
    */
@@ -114,7 +119,9 @@ const Layout = ({ children }) => {
           )}
         </Toolbar>
       </AppBar>
-      <div>{children}</div>
+      {children}
+      {/**children refers to all of the components/pages wrapped by the layout. */}
+      <Footer />
     </div>
   );
 };

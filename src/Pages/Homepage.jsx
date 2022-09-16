@@ -6,6 +6,9 @@ import {
   Container,
   Box,
   Divider,
+  ImageList,
+  ImageListItem,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
 import img from "../assets/images/IMG_8729.JPG";
@@ -13,7 +16,16 @@ import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 
 import { defaultTheme } from "../DefaultTheme";
 
-const home = () => {
+/**
+ * Material UI Breakpoints:
+ * xs: 0px - 599px
+ * sm: 600px - 899px
+ * md: 900px - 1199px
+ * lg: 1200px - 1535px
+ * xl: 1536px
+ */
+
+const Home = () => {
   // defaultTheme.typography.h2 = {
   //   fontSize: "3.75rem",
   //   [defaultTheme.breakpoints.down("md")]: {
@@ -29,13 +41,16 @@ const home = () => {
   //   },
   // };
 
+  const xxs = useMediaQuery("(max-width: 300px)");
+  console.log(xxs, "xxs");
+
   return (
     <>
       <Container
         sx={{
           height: "100vh",
+          // display: "flex",
           // backgroundColor: "aqua",
-          display: "flex",
         }}
       >
         <Grid container spacing={5}>
@@ -52,15 +67,65 @@ const home = () => {
               //this is how to center a typography.
             }}
           >
-            <Box>
-              <Typography variant="h2" lineHeight={1.3} textAlign="left">
+            <Box width="100%">
+              <Typography
+                variant="h2"
+                lineHeight={1.3}
+                fontSize={{
+                  lg: "4rem",
+                  md: "2.8rem",
+                  sm: "2.3rem",
+                  xs: "1.3rem",
+                }}
+                sx={{
+                  textAlign: {
+                    lg: "left",
+                    md: "left",
+                    sm: "center",
+                    xs: "center",
+                  },
+                }}
+              >
                 Hi, I'm Mark Baguio.
               </Typography>
-              <Typography variant="h2" color="#364966">
+              <Typography
+                variant="h2"
+                color="#364966"
+                fontSize={{
+                  lg: "4rem",
+                  md: "3rem",
+                  sm: "2.3rem",
+                  xs: "1.3rem",
+                }}
+                sx={{
+                  textAlign: {
+                    lg: "left",
+                    md: "left",
+                    sm: "center",
+                    xs: "center",
+                  },
+                }}
+              >
                 Computer Engineer.
                 <Divider light />
               </Typography>
-              <Typography variant="h6">
+              <Typography
+                variant="h6"
+                fontSize={{
+                  lg: "1.25rem",
+                  md: "1rem",
+                  sm: "0.9rem",
+                  xs: "0.6rem",
+                }}
+                sx={{
+                  textAlign: {
+                    lg: "left",
+                    md: "left",
+                    sm: "center",
+                    xs: "center",
+                  },
+                }}
+              >
                 I enjoy creating something out of{" "}
                 <Box
                   component="span"
@@ -72,39 +137,78 @@ const home = () => {
                   virtually nothing.
                 </Box>
               </Typography>
-              <ButtonGroup
-                variant="outlined"
-                color="inherit"
-                size="large"
-                sx={{
-                  marginTop: "3rem",
+              <Box
+                display="flex"
+                justifyContent={{
+                  lg: "start",
+                  md: "start",
+                  sm: "center",
+                  xs: "center",
                 }}
               >
-                <Button
+                <ButtonGroup
+                  variant="outlined"
+                  color="inherit"
+                  size="small"
                   sx={{
-                    ":hover": {
-                      backgroundColor: "inherit",
-                      // color: "#364966",
-                      color: "#ab47bc",
-                      transition: "0.5s all ease-in-out",
+                    marginTop: "3rem",
+                    fontSize: {
+                      sm: "0.5rem",
+                    },
+                  }}
+                >
+                  <Button
+                    sx={{
+                      ":hover": {
+                        backgroundColor: "inherit",
+                        // color: "#364966",
+                        color: "#ab47bc",
+                        transition: "0.5s all ease-in-out",
+                      },
+                      fontSize: {
+                        lg: "1rem",
+                        md: "1rem",
+                        sm: "0.6rem",
+                        xs: "0.5rem",
+                      },
+                    }}
+                  >
+                    Projects
+                  </Button>
+                  <Button
+                    endIcon={<DownloadOutlinedIcon />}
+                    sx={{
+                      ":hover": {
+                        backgroundColor: "inherit",
+                        color: "#ab47bc",
+                        transition: "0.5s all ease-in-out",
+                      },
+                      fontSize: {
+                        lg: "1rem",
+                        md: "1rem",
+                        sm: "0.6rem",
+                        xs: "0.5rem",
+                      },
+                    }}
+                  >
+                    Download Resume
+                  </Button>
+                </ButtonGroup>
+                {/* <Button
+                  variant="outlined"
+                  color="inherit"
+                  sx={{
+                    fontSize: {
+                      lg: "1rem",
+                      md: "1rem",
+                      sm: "0.5rem",
+                      xs: "0.3rem",
                     },
                   }}
                 >
                   Projects
-                </Button>
-                <Button
-                  endIcon={<DownloadOutlinedIcon />}
-                  sx={{
-                    ":hover": {
-                      backgroundColor: "inherit",
-                      color: "#ab47bc",
-                      transition: "0.5s all ease-in-out",
-                    },
-                  }}
-                >
-                  Download Resume
-                </Button>
-              </ButtonGroup>
+                </Button> */}
+              </Box>
             </Box>
           </Grid>
           <Grid
@@ -112,21 +216,43 @@ const home = () => {
             xs={12}
             sm={12}
             md={5}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "row",
-            }}
+            // backgroundColor="red"
+            // sx={{
+            //   display: "flex",
+            //   justifyContent: "center",
+            // }}
           >
             <Box
-              sx={
-                {
-                  // backgroundColor: "blue",
-                  // display: "block",
-                }
-              }
+              width="100%"
+              display="flex"
+              // backgroundColor="blue"
+              height="auto"
+              justifyContent={{
+                lg: "start",
+                md: "start",
+                sm: "center",
+                xs: "center",
+              }}
             >
-              <img width="fit-content" height="600px" src={img} alt="hehe" />
+              <ImageList
+                cols={1}
+                sx={{
+                  width: {
+                    md: "85%",
+                    sm: "50%",
+                    xs: "50%",
+                  },
+                }}
+              >
+                <ImageListItem>
+                  <img
+                    width="fit-content"
+                    height="600px"
+                    src={img}
+                    alt="hehe"
+                  />
+                </ImageListItem>
+              </ImageList>
             </Box>
           </Grid>
         </Grid>
@@ -135,4 +261,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
