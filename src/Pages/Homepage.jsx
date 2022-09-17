@@ -9,8 +9,9 @@ import {
   ImageList,
   ImageListItem,
   useMediaQuery,
+  Fade,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../assets/images/IMG_8729.JPG";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 
@@ -48,8 +49,8 @@ const Home = () => {
   //   },
   // };
 
-  const xxs = useMediaQuery("(max-width: 300px)");
-  console.log(xxs, "xxs");
+  // const xxs = useMediaQuery("(max-width: 300px)");
+  // console.log(xxs, "xxs");
 
   return (
     <>
