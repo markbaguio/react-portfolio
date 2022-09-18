@@ -7,10 +7,13 @@ import {
   CardContent,
   CardMedia,
   CardActions,
+  Grid,
 } from "@mui/material";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import CardComponent from "../Components/CardComponent";
+import dambologo from "../assets/images/dambomilktealogo.jpg";
+import tasktrackerlogo from "../assets/images/Tasktrackerlogo.png";
+import vegemarketlogo from "../assets/images/vegemarketlogo.png";
+import goalslogo from "../assets/images/Goalslogo.png";
 
 const Projects = () => {
   const cards = [
@@ -19,21 +22,39 @@ const Projects = () => {
       header: "DAMBO Milktea",
       description:
         "A front end Website for a Milktea business in Pulilan, Bulacan.",
-      image: "https://source.unsplash.com/random",
+      image: dambologo,
+      tooltipText: "HTML, CSS, Bootstrap, Javascript",
+      githubUrl: "https://github.com/kristiansantos11/DamboMilkTea.git",
+      isFinished: true,
     },
     {
       id: 2,
       header: "VegeMarket",
       description:
         "An e-commerce mobile application dedicated for vegetable retailers",
-      image: "https://source.unsplash.com/random",
+      image: vegemarketlogo,
+      tooltipText: "Dart, Flutter, MaterialUI, Firebase, Firestore",
+      githubUrl: "https://github.com/markbaguio/Vegemarket.git",
+      isFinished: true,
     },
     {
       id: 3,
       header: "Task tracker",
       description:
         "A simple web application that sets reminder for each tasks.",
-      image: "https://source.unsplash.com/random",
+      image: tasktrackerlogo,
+      tooltipText: "React, JSON Web Server, CSS",
+      githubUrl: "https://github.com/markbaguio/task-tracker.git",
+      isFinished: true,
+    },
+    {
+      id: 4,
+      header: "Goals App",
+      description:
+        "A simple full-stack app that enables its user to save and keep track of their goals.",
+      image: goalslogo,
+      githubUrl: "https://github.com/markbaguio/mern-tutorial.git",
+      isFinished: false,
     },
   ];
 
@@ -42,12 +63,13 @@ const Projects = () => {
       <Box
         width="100%"
         display="flex"
+        height="100%"
         justifyContent="center"
+        alignItems="center"
         flexDirection="row"
         paddingTop="6rem"
         paddingBottom="6rem"
       >
-        {/* <Paper elevation={3}> */}
         {/* <Card>
           <CardContent>
             <Typography variant="h5">DAMBO Milktea</Typography>
@@ -56,15 +78,24 @@ const Projects = () => {
             </Typography>
           </CardContent>
         </Card> */}
-        {cards.map((card) => (
-          <CardComponent
-            key={card.id}
-            header={card.header}
-            description={card.description}
-            imagesrc={card.image}
-          />
-        ))}
-        {/* </Paper> */}
+        {/* <Grid container>
+          <Grid item xs={12} sm={12} md={12}> */}
+        <Grid container>
+          {cards.map((card) => (
+            <Grid item xs={12} sm={6} md={3}>
+              <CardComponent
+                key={card.id}
+                header={card.header}
+                description={card.description}
+                imagesrc={card.image}
+                tooltipText={card.tooltipText}
+                githubUrl={card.githubUrl}
+              />
+            </Grid>
+          ))}
+        </Grid>
+        {/* </Grid>
+        </Grid> */}
       </Box>
     </Container>
   );

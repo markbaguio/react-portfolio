@@ -27,7 +27,8 @@ const Footer = () => {
             >
               <a href="https://www.facebook.com/markbaguio0912" target="_blank">
                 <IconButton
-                  // size="large"
+                  disableRipple
+                  size="large"
                   sx={{
                     ":hover": {
                       color: "#364966",
@@ -52,6 +53,7 @@ const Footer = () => {
                 target="_blank"
               >
                 <IconButton
+                  disableRipple
                   size="large"
                   sx={{
                     ":hover": {
@@ -74,6 +76,7 @@ const Footer = () => {
               </a>
               <a href="https://github.com/markbaguio" target="_blank">
                 <IconButton
+                  disableRipple
                   size="large"
                   sx={{
                     ":hover": {

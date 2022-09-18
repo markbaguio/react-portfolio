@@ -1,4 +1,4 @@
-import { createTheme, responsiveFontSizes } from "@mui/material";
+import { createTheme, responsiveFontSizes, Button } from "@mui/material";
 
 export let defaultTheme = createTheme({
   palette: {
@@ -17,6 +17,14 @@ export let defaultTheme = createTheme({
         sx: {
           // backgroundColor: "#242526",
           marginBottom: "1rem",
+        },
+      },
+    },
+    MuiButton: {
+      defaultProps: {
+        sx: {
+          color: "inherit",
+          backgroundColor: "inherit",
         },
       },
     },
