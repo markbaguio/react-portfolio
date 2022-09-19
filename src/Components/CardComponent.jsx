@@ -8,10 +8,11 @@ import {
   Button,
   Tooltip,
   IconButton,
+  Box,
+  Divider,
 } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
-import { defaultTheme } from "../DefaultTheme";
-import { Box } from "@mui/system";
+import StatusComponent from "./StatusComponent";
 
 const CardComponent = ({
   header,
@@ -19,12 +20,15 @@ const CardComponent = ({
   imagesrc,
   tooltipText,
   githubUrl,
+  isFinished,
 }) => {
   return (
     <>
       <Card
         sx={{
           margin: "1rem",
+          width: "fit-content",
+          maxWidth: "345px",
         }}
       >
         <CardContent>
@@ -37,10 +41,22 @@ const CardComponent = ({
               maxWidth: "100%",
             }}
           />
-          <Typography marginTop="1rem" gutterBottom variant="h5">
-            {header}
-          </Typography>
-          <Typography variant="body1">{description}</Typography>
+          <Box>
+            <Typography marginTop="1rem" variant="h5">
+              {header}
+            </Typography>
+            <Divider />
+            {isFinished == false ? (
+              <StatusComponent />
+            ) : (
+              <Typography
+                sx={{
+                  margin: "1.5rem",
+                }}
+              />
+            )}
+          </Box>
+          <Typography variant="caption">{description}</Typography>
         </CardContent>
         <CardActions>
           <a href={githubUrl} target="_blank">
@@ -63,6 +79,7 @@ const CardComponent = ({
               <CodeIcon />
             </IconButton>
           </Tooltip>
+          {/* {isFinished == false && <StatusComponent />} */}
         </CardActions>
       </Card>
     </>

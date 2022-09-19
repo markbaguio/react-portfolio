@@ -51,8 +51,9 @@ const Projects = () => {
       id: 4,
       header: "Goals App",
       description:
-        "A simple full-stack app that enables its user to save and keep track of their goals.",
+        "A full-stack app that enables its user to save and keep track of their goals.",
       image: goalslogo,
+      tooltipText: "Node JS, Express, MongoDB, Mongoose, React, Material UI",
       githubUrl: "https://github.com/markbaguio/mern-tutorial.git",
       isFinished: false,
     },
@@ -90,6 +91,7 @@ const Projects = () => {
                 imagesrc={card.image}
                 tooltipText={card.tooltipText}
                 githubUrl={card.githubUrl}
+                isFinished={card.isFinished}
               />
             </Grid>
           ))}
