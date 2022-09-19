@@ -4,7 +4,6 @@ import {
   CardActions,
   CardMedia,
   Typography,
-  Grid,
   Button,
   Tooltip,
   IconButton,
@@ -13,6 +12,22 @@ import {
 } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import StatusComponent from "./StatusComponent";
+
+/**
+ * Material UI Breakpoints:
+ * xs: 0px - 599px
+ * sm: 600px - 899px
+ * md: 900px - 1199px
+ * lg: 1200px - 1535px
+ * xl: 1536px
+ * 
+ * Updated breakpoints:
+ *  xs: 0px - 399px,
+    sm: 400px - 899px,
+    md: 900px - 1199px,
+    lg: 1200px - 1535px,
+    xl: 1536,
+ */
 
 const CardComponent = ({
   header,
@@ -42,11 +57,19 @@ const CardComponent = ({
             }}
           />
           <Box>
-            <Typography marginTop="1rem" variant="h5">
+            <Typography
+              marginTop="1rem"
+              variant="h5"
+              fontSize={{
+                lg: "1.5rem",
+                md: "1rem",
+                sm: "1.2rem",
+              }}
+            >
               {header}
             </Typography>
             <Divider />
-            {isFinished == false ? (
+            {isFinished === false ? (
               <StatusComponent />
             ) : (
               <Typography
@@ -56,10 +79,19 @@ const CardComponent = ({
               />
             )}
           </Box>
-          <Typography variant="caption">{description}</Typography>
+          <Typography
+            variant="caption"
+            fontSize={{
+              lg: "0.75rem",
+              md: "0.65rem",
+              sm: "0.72rem",
+            }}
+          >
+            {description}
+          </Typography>
         </CardContent>
         <CardActions>
-          <a href={githubUrl} target="_blank">
+          <a href={githubUrl} target="_blank" rel="noreferrer">
             <Button
               variant="outlined"
               color="inherit"

@@ -82,8 +82,8 @@ const Layout = ({ children }) => {
                 Mark Baguio
               </Typography>
               <Tabs
-                indicatorColor="secondary"
-                textColor="secondary"
+                indicatorColor="primary"
+                textColor="primary"
                 value={value}
                 onChange={handleChange}
               >

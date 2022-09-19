@@ -3,6 +3,9 @@ import { createTheme, responsiveFontSizes, Button } from "@mui/material";
 export let defaultTheme = createTheme({
   palette: {
     mode: "dark",
+    primary: {
+      main: "#364966",
+    },
   },
   components: {
     MuiContainer: {

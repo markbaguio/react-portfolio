@@ -1,14 +1,4 @@
-import {
-  Typography,
-  Box,
-  Paper,
-  Container,
-  Card,
-  CardContent,
-  CardMedia,
-  CardActions,
-  Grid,
-} from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import CardComponent from "../Components/CardComponent";
 import dambologo from "../assets/images/dambomilktealogo.jpg";
 import tasktrackerlogo from "../assets/images/Tasktrackerlogo.png";
@@ -71,16 +61,6 @@ const Projects = () => {
         paddingTop="6rem"
         paddingBottom="6rem"
       >
-        {/* <Card>
-          <CardContent>
-            <Typography variant="h5">DAMBO Milktea</Typography>
-            <Typography variant="body1">
-              A front end Website for a Milktea business in Pulilan, Bulacan.
-            </Typography>
-          </CardContent>
-        </Card> */}
-        {/* <Grid container>
-          <Grid item xs={12} sm={12} md={12}> */}
         <Grid container>
           {cards.map((card) => (
             <Grid item xs={12} sm={6} md={3}>
@@ -96,8 +76,6 @@ const Projects = () => {
             </Grid>
           ))}
         </Grid>
-        {/* </Grid>
-        </Grid> */}
       </Box>
     </Container>
   );

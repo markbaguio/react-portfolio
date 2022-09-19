@@ -1,4 +1,4 @@
-import { Chip, Typography } from "@mui/material";
+import { Chip } from "@mui/material";
 
 const StatusComponent = () => {
   return (
