@@ -39,81 +39,83 @@ const CardComponent = ({
 }) => {
   return (
     <>
-      <Card
-        sx={{
-          margin: "1rem",
-          width: "fit-content",
-          maxWidth: "345px",
-        }}
-      >
-        <CardContent>
-          <CardMedia
-            component="img"
-            height="100%"
-            image={imagesrc}
-            sx={{
-              objectFit: "contain",
-              maxWidth: "100%",
-            }}
-          />
-          <Box>
-            <Typography
-              marginTop="1rem"
-              variant="h5"
-              fontSize={{
-                lg: "1.5rem",
-                md: "1rem",
-                sm: "1.2rem",
-              }}
-            >
-              {header}
-            </Typography>
-            <Divider />
-            {isFinished === false ? (
-              <StatusComponent />
-            ) : (
-              <Typography
-                sx={{
-                  margin: "1.5rem",
-                }}
-              />
-            )}
-          </Box>
-          <Typography
-            variant="caption"
-            fontSize={{
-              lg: "0.75rem",
-              md: "0.65rem",
-              sm: "0.72rem",
-            }}
-          >
-            {description}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <a href={githubUrl} target="_blank" rel="noreferrer">
-            <Button
-              variant="outlined"
-              color="inherit"
+      <Box data-aos="flip-right">
+        <Card
+          sx={{
+            margin: "1rem",
+            width: "fit-content",
+            maxWidth: "345px",
+          }}
+        >
+          <CardContent>
+            <CardMedia
+              component="img"
+              height="100%"
+              image={imagesrc}
               sx={{
-                ":hover": {
-                  backgroundColor: "#364966",
-                  color: "#111",
-                  transition: "0.5s all ease-in-out",
-                },
+                objectFit: "contain",
+                maxWidth: "100%",
+              }}
+            />
+            <Box>
+              <Typography
+                marginTop="1rem"
+                variant="h5"
+                fontSize={{
+                  lg: "1.5rem",
+                  md: "1rem",
+                  sm: "1.2rem",
+                }}
+              >
+                {header}
+              </Typography>
+              <Divider />
+              {isFinished === false ? (
+                <StatusComponent />
+              ) : (
+                <Typography
+                  sx={{
+                    margin: "1.5rem",
+                  }}
+                />
+              )}
+            </Box>
+            <Typography
+              variant="caption"
+              fontSize={{
+                lg: "0.75rem",
+                md: "0.65rem",
+                sm: "0.72rem",
               }}
             >
-              Github
-            </Button>
-          </a>
-          <Tooltip title={tooltipText}>
-            <IconButton>
-              <CodeIcon />
-            </IconButton>
-          </Tooltip>
-          {/* {isFinished == false && <StatusComponent />} */}
-        </CardActions>
-      </Card>
+              {description}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <a href={githubUrl} target="_blank" rel="noreferrer">
+              <Button
+                variant="outlined"
+                color="inherit"
+                sx={{
+                  ":hover": {
+                    backgroundColor: "#364966",
+                    color: "#111",
+                    transition: "0.5s all ease-in-out",
+                  },
+                }}
+              >
+                Github
+              </Button>
+            </a>
+            <Tooltip title={tooltipText}>
+              <IconButton>
+                <CodeIcon />
+              </IconButton>
+            </Tooltip>
+            {/* {isFinished == false && <StatusComponent />} */}
+          </CardActions>
+        </Card>
+      </Box>
     </>
   );
 };
