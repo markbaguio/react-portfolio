@@ -10,7 +10,6 @@ const Footer = () => {
         style={{
           backgroundColor: "#242526",
           position: "relative",
-          height: "fit-content",
         }}
       >
         {/* <Container

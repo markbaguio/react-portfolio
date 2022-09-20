@@ -8,14 +8,9 @@ import {
   Divider,
   ImageList,
   ImageListItem,
-  useMediaQuery,
-  Fade,
 } from "@mui/material";
-import React, { useEffect } from "react";
 import img from "../assets/images/IMG_8729.JPG";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-
-import { defaultTheme } from "../DefaultTheme";
 
 /**
  * Material UI Breakpoints:
