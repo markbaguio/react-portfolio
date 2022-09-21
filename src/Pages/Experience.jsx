@@ -129,7 +129,6 @@ const Experience = () => {
       </Container>
       <Container
         sx={{
-          height: "100%",
           marginTop: "5rem",
         }}
       >
@@ -172,17 +171,7 @@ const Experience = () => {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineConnector />
-                  <TimelineDot variant="outlined" color="primary">
-                    {/* <IconButton
-                    size="small"
-                    LinkComponent="a"
-                    href="https://github.com/kristiansantos11/DamboMilkTea.git"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <CodeIcon />
-                  </IconButton> */}
-                  </TimelineDot>
+                  <TimelineDot variant="outlined" color="primary"></TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ my: "4.5rem" }}>
@@ -227,17 +216,7 @@ const Experience = () => {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineConnector />
-                  <TimelineDot variant="outlined" color="primary">
-                    {/* <IconButton
-                    size="medium"
-                    LinkComponent="a"
-                    href="https://github.com/kristiansantos11/DamboMilkTea.git"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FileDownloadOutlinedIcon />
-                  </IconButton> */}
-                  </TimelineDot>
+                  <TimelineDot variant="outlined" color="primary"></TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ my: "5.3rem" }}>
@@ -283,17 +262,7 @@ const Experience = () => {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineConnector />
-                  <TimelineDot variant="outlined" color="primary">
-                    {/* <IconButton
-                    size="medium"
-                    LinkComponent="a"
-                    href="https://github.com/markbaguio/Vegemarket.git"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <CodeIcon />
-                  </IconButton> */}
-                  </TimelineDot>
+                  <TimelineDot variant="outlined" color="primary"></TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ my: "6rem" }}>
@@ -339,17 +308,7 @@ const Experience = () => {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineConnector />
-                  <TimelineDot variant="outlined" color="primary">
-                    {/* <IconButton
-                    size="medium"
-                    LinkComponent="a"
-                    href="https://github.com/kristiansantos11/DamboMilkTea.git"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FileDownloadOutlinedIcon />
-                  </IconButton> */}
-                  </TimelineDot>
+                  <TimelineDot variant="outlined" color="primary"></TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ my: "4.8rem" }}>

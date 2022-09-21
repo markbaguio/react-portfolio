@@ -9,6 +9,7 @@ import { defaultTheme } from "../src/DefaultTheme";
 import aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Footer from "./Components/Footer";
 
 function App() {
   /**

@@ -9,6 +9,7 @@ import {
   ImageList,
   ImageListItem,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import img from "../assets/images/IMG_8729.JPG";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 
@@ -161,6 +162,8 @@ const Home = () => {
                   }}
                 >
                   <Button
+                    LinkComponent={Link}
+                    to="/projects"
                     sx={{
                       ":hover": {
                         backgroundColor: "inherit",

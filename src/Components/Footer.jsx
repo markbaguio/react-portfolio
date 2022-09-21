@@ -8,18 +8,23 @@ const Footer = () => {
       <footer
         style={{
           backgroundColor: "#242526",
-          position: "relative",
-          display: "block",
+          height: window.innerHeight,
+          marginTop: "3rem",
+          // backgroundColor: "aqua",
         }}
       >
-        <Grid container spacing={3} marginTop="2rem">
+        <Grid container rowSpacing={3}>
           <Grid item xs={12} sm={12} md={12}>
             <Box
               // backgroundColor="gray"
               display="flex"
               justifyContent="center"
             >
-              <a href="https://www.facebook.com/markbaguio0912" target="_blank">
+              <a
+                href="https://www.facebook.com/markbaguio0912"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <IconButton
                   disableRipple
                   size="large"
@@ -45,6 +50,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/in/baguio-mark-godwin-c/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <IconButton
                   disableRipple
@@ -68,7 +74,11 @@ const Footer = () => {
                   />
                 </IconButton>
               </a>
-              <a href="https://github.com/markbaguio" target="_blank">
+              <a
+                href="https://github.com/markbaguio"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <IconButton
                   disableRipple
                   size="large"
@@ -105,8 +115,8 @@ const Footer = () => {
                   fontSize={{
                     lg: "1rem",
                     md: "1rem",
-                    sm: "0.8rem",
-                    xs: "0.7rem",
+                    sm: "0.9rem",
+                    xs: "0.8rem",
                   }}
                   sx={{
                     ":hover": {
@@ -120,15 +130,15 @@ const Footer = () => {
               </a>
             </Box>
           </Grid>
-          {/* <Grid item xs={12} sm={12} md={12} paddingBottom="5rem">
+          <Grid item xs={12} sm={12} md={12}>
             <Box
-              width="100%"
               height="fit-content"
+              width="100%"
               fontSize={{
                 lg: "0.8rem",
                 md: "0.8rem",
-                sm: "0.5rem",
-                xs: "0.3rem",
+                sm: "0.6rem",
+                xs: "0.5rem",
               }}
               sx={{
                 display: "flex",
@@ -223,7 +233,7 @@ const Footer = () => {
                 Photoshop icons created by Freepik - Flaticon
               </a>
             </Box>
-          </Grid> */}
+          </Grid>
         </Grid>
         {/* </Container> */}
       </footer>

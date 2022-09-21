@@ -6,6 +6,8 @@ import {
   Tab,
   useTheme,
   useMediaQuery,
+  IconButton,
+  Box,
 } from "@mui/material";
 import { useState, useEffect } from "react";
 import DrawerComponent from "./DrawerComponent";
@@ -66,7 +68,7 @@ const Layout = ({ children }) => {
   // };
 
   return (
-    <div>
+    <>
       <AppBar position="sticky" elevation={4}>
         <Toolbar>
           {isMatch ? (
@@ -122,7 +124,7 @@ const Layout = ({ children }) => {
       {children}
       {/**children refers to all of the components/pages wrapped by the layout. */}
       <Footer />
-    </div>
+    </>
   );
 };
 
