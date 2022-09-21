@@ -5,6 +5,7 @@ import {
   Container,
   IconButton,
   Grid,
+  BottomNavigation,
 } from "@mui/material";
 import {
   Timeline,
@@ -17,18 +18,143 @@ import {
 } from "@mui/lab";
 import CodeIcon from "@mui/icons-material/Code";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import SkillsComponent from "../Components/SkillsComponent";
+import pythonLogo from "../assets/images/python.png";
+import javascriptLogo from "../assets/images/js.png";
+import reactLogo from "../assets/images/physics.png";
+import mongoDBLogo from "../assets/images/mongo.png";
+import htmlLogo from "../assets/images/html.png";
+import javaLogo from "../assets/images/java.png";
+import figmaLogo from "../assets/images/figma.png";
+import phpLogo from "../assets/images/php.png";
+import officeLogo from "../assets/images/office.png";
+import photostopLogo from "../assets/images/photoshop.png";
+import flutterLogo from "../assets/images/flutter.png";
+import expressLogo from "../assets/images/express.png";
+import bootstrapLogo from "../assets/images/bootstrap.png";
+import cssLogo from "../assets/images/css-3.png";
 
 const Experience = () => {
+  const skillCards = [
+    {
+      image: pythonLogo,
+      name: "Python",
+    },
+    {
+      image: javascriptLogo,
+      name: "Javascript",
+    },
+    {
+      image: expressLogo,
+      name: "ExpressJS",
+    },
+    {
+      image: reactLogo,
+      name: "React",
+    },
+    {
+      image: mongoDBLogo,
+      name: "MongoDB",
+    },
+    {
+      image: htmlLogo,
+      name: "HTML",
+    },
+    {
+      image: cssLogo,
+      name: "CSS",
+    },
+    {
+      image: bootstrapLogo,
+      name: "Bootstrap",
+    },
+    {
+      image: javaLogo,
+      name: "Java",
+    },
+    {
+      image: phpLogo,
+      name: "PHP",
+    },
+    {
+      image: flutterLogo,
+      name: "Flutter",
+    },
+    {
+      image: officeLogo,
+      name: "MS Office Suite",
+    },
+    {
+      image: figmaLogo,
+      name: "Figma",
+    },
+    {
+      image: photostopLogo,
+      name: "Photoshop",
+    },
+  ];
   return (
     <>
+      <Container maxWidth="lg">
+        <Box data-aos="slide-up">
+          <Typography
+            variant="h2"
+            align="center"
+            gutterBottom
+            fontSize={{
+              lg: "3.75rem",
+              md: "2.5rem",
+              sm: "2rem",
+              xs: "2rem",
+            }}
+          >
+            Skills
+          </Typography>
+        </Box>
+        <Grid
+          container
+          // marginBottom="10rem"
+          spacing={4}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          {skillCards.map((skill, i) => (
+            <Grid key={i} item xs={12} sm={6} md={4} lg={3}>
+              <SkillsComponent image={skill.image} name={skill.name} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
       <Container
         sx={{
           height: "100%",
           marginTop: "5rem",
         }}
       >
-        <Paper elevation={1}>
-          <Box data-aos="fade-left" width="100%">
+        <Paper
+          elevation={1}
+          sx={{
+            paddingTop: "3rem",
+            paddingBottom: "3rem",
+          }}
+        >
+          <Box data-aos="slide-up">
+            <Typography
+              variant="h2"
+              align="center"
+              fontSize={{
+                lg: "3.75rem",
+                md: "2.5rem",
+                sm: "2rem",
+                xs: "2rem",
+              }}
+            >
+              Experience
+            </Typography>
+          </Box>
+          <Box data-aos="fade-up" width="100%">
             <Timeline position="alternate">
               <TimelineItem>
                 <TimelineOppositeContent
@@ -266,14 +392,6 @@ const Experience = () => {
             </Timeline>
           </Box>
         </Paper>
-        <Grid container>
-          <Grid item xs={6} sm={6} md={12} lg={12} backgroundColor="red">
-            Lorem ipsum dolor sit.
-          </Grid>
-          <Grid item xs={6} sm={6} md={12} lg={12} backgroundColor="blue ">
-            Lorem ipsum dolor sit amet.
-          </Grid>
-        </Grid>
       </Container>
     </>
   );

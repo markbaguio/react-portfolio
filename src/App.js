@@ -30,7 +30,6 @@ function App() {
             <Route path="/Projects" element={<Projects />} />
             <Route path="/Experience" element={<Experience />} />
           </Routes>
-          {/* </Container> */}
         </Layout>
       </ThemeProvider>
     </>

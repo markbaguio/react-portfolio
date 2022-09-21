@@ -1,4 +1,4 @@
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import CardComponent from "../Components/CardComponent";
 import dambologo from "../assets/images/dambomilktealogo.jpg";
 import tasktrackerlogo from "../assets/images/Tasktrackerlogo.png";
@@ -51,6 +51,11 @@ const Projects = () => {
 
   return (
     <Container maxWidth="lg">
+      <Box data-aos="slide-up">
+        <Typography variant="h2" align="center" gutterBottom>
+          Projects
+        </Typography>
+      </Box>
       <Box
         width="100%"
         display="flex"
@@ -58,12 +63,11 @@ const Projects = () => {
         justifyContent="center"
         alignItems="center"
         flexDirection="row"
-        paddingTop="6rem"
         paddingBottom="6rem"
       >
         <Grid container>
-          {cards.map((card) => (
-            <Grid item xs={12} sm={6} md={3}>
+          {cards.map((card, i) => (
+            <Grid key={i} item xs={12} sm={6} md={3}>
               <CardComponent
                 key={card.id}
                 header={card.header}
