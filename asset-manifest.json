@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.640c4502.css",
-    "main.js": "/react-portfolio/static/js/main.f0c40a48.js",
+    "main.js": "/react-portfolio/static/js/main.5492a571.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/IMG_8729.JPG": "/react-portfolio/static/media/IMG_8729.96f605c7a01425a420d8.JPG",
+    "static/media/Resume - Mark Godwin Baguio.pdf": "/react-portfolio/static/media/Resume - Mark Godwin Baguio.cec1f1031eebac49b556.pdf",
     "static/media/vegemarketlogo.png": "/react-portfolio/static/media/vegemarketlogo.474712721ebc01a6dbb8.png",
     "static/media/dambomilktealogo.jpg": "/react-portfolio/static/media/dambomilktealogo.78f843398d1a8eea3e5e.jpg",
     "static/media/physics.png": "/react-portfolio/static/media/physics.e36fe32559c4360c77d0.png",
@@ -12,11 +13,11 @@
     "static/media/Tasktrackerlogo.png": "/react-portfolio/static/media/Tasktrackerlogo.40bffa79b587bee3d666.png",
     "index.html": "/react-portfolio/index.html",
     "main.640c4502.css.map": "/react-portfolio/static/css/main.640c4502.css.map",
-    "main.f0c40a48.js.map": "/react-portfolio/static/js/main.f0c40a48.js.map",
+    "main.5492a571.js.map": "/react-portfolio/static/js/main.5492a571.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.640c4502.css",
-    "static/js/main.f0c40a48.js"
+    "static/js/main.5492a571.js"
   ]
 }
