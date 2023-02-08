@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import img from "../assets/images/IMG_8729.JPG";
+import resume from "../assets/files/Resume - Mark Godwin Baguio.pdf";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 
 /**
@@ -181,24 +182,26 @@ const Home = () => {
                   >
                     Projects
                   </Button>
-                  <Button
-                    endIcon={<DownloadOutlinedIcon />}
-                    sx={{
-                      ":hover": {
-                        backgroundColor: "inherit",
-                        color: "#ab47bc",
-                        transition: "0.5s all ease-in-out",
-                      },
-                      fontSize: {
-                        lg: "1rem",
-                        md: "1rem",
-                        sm: "0.6rem",
-                        xs: "0.5rem",
-                      },
-                    }}
-                  >
-                    Download Resume
-                  </Button>
+                  <a href={resume} download target="_blank">
+                    <Button
+                      endIcon={<DownloadOutlinedIcon />}
+                      sx={{
+                        ":hover": {
+                          backgroundColor: "inherit",
+                          color: "#ab47bc",
+                          transition: "0.5s all ease-in-out",
+                        },
+                        fontSize: {
+                          lg: "1rem",
+                          md: "1rem",
+                          sm: "0.6rem",
+                          xs: "0.5rem",
+                        },
+                      }}
+                    >
+                      Download Resume
+                    </Button>
+                  </a>
                 </ButtonGroup>
                 {/* <Button
                   variant="outlined"
