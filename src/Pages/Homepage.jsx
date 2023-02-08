@@ -49,6 +49,14 @@ const Home = () => {
   // const xxs = useMediaQuery("(max-width: 300px)");
   // console.log(xxs, "xxs");
 
+  //this is how to add a download function on a MUI button.
+  const onDownloadResume = () => {
+    const link = document.createElement("a");
+    link.download = `Resume - Mark Godwin Baguio.pdf`;
+    link.href = resume;
+    link.click();
+  };
+
   return (
     <>
       <Container
@@ -182,26 +190,27 @@ const Home = () => {
                   >
                     Projects
                   </Button>
-                  <a href={resume} download target="_blank">
-                    <Button
-                      endIcon={<DownloadOutlinedIcon />}
-                      sx={{
-                        ":hover": {
-                          backgroundColor: "inherit",
-                          color: "#ab47bc",
-                          transition: "0.5s all ease-in-out",
-                        },
-                        fontSize: {
-                          lg: "1rem",
-                          md: "1rem",
-                          sm: "0.6rem",
-                          xs: "0.5rem",
-                        },
-                      }}
-                    >
-                      Download Resume
-                    </Button>
-                  </a>
+                  {/* <a href={resume} download target="_blank"> */}
+                  <Button
+                    onClick={onDownloadResume}
+                    endIcon={<DownloadOutlinedIcon />}
+                    sx={{
+                      ":hover": {
+                        backgroundColor: "inherit",
+                        color: "#ab47bc",
+                        transition: "0.5s all ease-in-out",
+                      },
+                      fontSize: {
+                        lg: "1rem",
+                        md: "1rem",
+                        sm: "0.6rem",
+                        xs: "0.5rem",
+                      },
+                    }}
+                  >
+                    Download Resume
+                  </Button>
+                  {/* </a> */}
                 </ButtonGroup>
                 {/* <Button
                   variant="outlined"
